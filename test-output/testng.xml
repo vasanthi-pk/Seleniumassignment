@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Test Suite" verbose="1">
+	<listeners>
+		<listener class-name="com.ecart.base.TestListener" />
+			</listeners>
+	<test name="Ecart Tests">
+		<classes>
+				<class name="com.ecart.test.SearchPageTestCases" />
+				<class name="com.ecart.test.ProductPageTestCases" />
+				<class name="com.ecart.test.SummarypageTestCases" />
+					
+		</classes>
+	</test>
+</suite>
