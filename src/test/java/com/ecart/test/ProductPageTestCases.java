@@ -63,7 +63,7 @@ public class ProductPageTestCases extends TestBase{
 		ExtentTestManager.getTest().log(Status.INFO, "validating item count in summary page");
 		Assert.assertEquals(itemsincart, "1 Product");
 		Assert.assertTrue(true);
-		ExtentTestManager.getTest().log(Status.INFO, "Test Executed successfully");
+		ExtentTestManager.getTest().log(Status.INFO, "Test Executed successfully.");
 
 				
 	}
