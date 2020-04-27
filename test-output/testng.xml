@@ -5,10 +5,11 @@
 			</listeners>
 	<test name="Ecart Tests">
 		<classes>
-				<class name="com.ecart.test.SearchPageTestCases" />
-				<class name="com.ecart.test.ProductPageTestCases" />
+				
 				<class name="com.ecart.test.SummarypageTestCases" />
-					
+				<class name="com.ecart.test.SearchPageTestCases"/>
+				<class name="com.ecart.test.ProductPageTestCases"/>
+									  
 		</classes>
 	</test>
 </suite>

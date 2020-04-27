@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Test_Suite">
+              <span class="suite-name border-failed">Test Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Test_Suite">
+                    <span>D:\ecartproject\test-output\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Test_Suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Test_Suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Test_Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Test_Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Test_Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Test_Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">17 methods, 1 failed,   16 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Test_Suite" class="hide-methods failed suite-Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Test_Suite -->
+                      <a href="#" panel-name="suite-Test_Suite" class="show-methods failed suite-Test_Suite"> (show)</a> <!-- show-methods failed suite-Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Test_Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.SearchPageTestCases" hash-for-method="validateSearchReultsMatchingSearchQuery">validateSearchReultsMatchingSearchQuery</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Test_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Test_Suite" class="hide-methods passed suite-Test_Suite"> (hide)</a> <!-- hide-methods passed suite-Test_Suite -->
+                      <a href="#" panel-name="suite-Test_Suite" class="show-methods passed suite-Test_Suite"> (show)</a> <!-- show-methods passed suite-Test_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Test_Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.SearchPageTestCases" hash-for-method="clickOnItemsNavigateToProductDescriptionPage">clickOnItemsNavigateToProductDescriptionPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.SearchPageTestCases" hash-for-method="validatePageTitleTest">validatePageTitleTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.SummarypageTestCases" hash-for-method="validatePriceTotalsUpdateAfterAddItemaInShoppingCart">validatePriceTotalsUpdateAfterAddItemaInShoppingCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.ProductPageTestCases" hash-for-method="validateProductDesciptionPageForSingleItemInCart">validateProductDesciptionPageForSingleItemInCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.ProductPageTestCases" hash-for-method="validateProductDescriptionPageforPrinteddress">validateProductDescriptionPageforPrinteddress</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.ProductPageTestCases" hash-for-method="validateProductiondescriptionpageforPrintedChiffondress">validateProductiondescriptionpageforPrintedChiffondress</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.ProductPageTestCases" hash-for-method="validateProductiondescriptionpagefortshirtitem">validateProductiondescriptionpagefortshirtitem</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.SummarypageTestCases" hash-for-method="validateQuanityOfItemsAndPricetotalsUpdateAfterRemoveAddItemsInShoppingCart">validateQuanityOfItemsAndPricetotalsUpdateAfterRemoveAddItemsInShoppingCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.SummarypageTestCases" hash-for-method="validateQuanityOfItemsUpdateForMoreItemsInSummaryPage">validateQuanityOfItemsUpdateForMoreItemsInSummaryPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.SearchPageTestCases" hash-for-method="validateResultsMessageForInvalidItemsTest">validateResultsMessageForInvalidItemsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.SearchPageTestCases" hash-for-method="validateResultsMessageForNoItemsSearch">validateResultsMessageForNoItemsSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.SearchPageTestCases" hash-for-method="validateSearchBoxWithValidItemsTest">validateSearchBoxWithValidItemsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.SearchPageTestCases" hash-for-method="validateShoppingCartEmpty">validateShoppingCartEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.SummarypageTestCases" hash-for-method="validateSummaryPageForSingleItemInCart">validateSummaryPageForSingleItemInCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.SearchPageTestCases" hash-for-method="validateTabsInSearchPage">validateTabsInSearchPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Suite" title="com.ecart.test.SummarypageTestCases" hash-for-method="validatetabdisplayed">validatetabdisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Test_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Test_Suite" class="panel Test_Suite">
+          <div class="suite-Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.ecart.test.SearchPageTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSearchReultsMatchingSearchQuery">
+                  </a> <!-- validateSearchReultsMatchingSearchQuery -->
+                  <span class="method-name">validateSearchReultsMatchingSearchQuery</span>
+                  <div class="stack-trace">java.lang.AssertionError: Invalid items blouse and t-shirt diplayed,its a defect expected [true] but found [false]
+	at com.ecart.test.SearchPageTestCases.validateSearchReultsMatchingSearchQuery(SearchPageTestCases.java:151)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Test_Suite-class-failed -->
+          <div class="suite-Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ecart.test.SummarypageTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validatePriceTotalsUpdateAfterAddItemaInShoppingCart">
+                  </a> <!-- validatePriceTotalsUpdateAfterAddItemaInShoppingCart -->
+                  <span class="method-name">validatePriceTotalsUpdateAfterAddItemaInShoppingCart</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateQuanityOfItemsAndPricetotalsUpdateAfterRemoveAddItemsInShoppingCart">
+                  </a> <!-- validateQuanityOfItemsAndPricetotalsUpdateAfterRemoveAddItemsInShoppingCart -->
+                  <span class="method-name">validateQuanityOfItemsAndPricetotalsUpdateAfterRemoveAddItemsInShoppingCart</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateQuanityOfItemsUpdateForMoreItemsInSummaryPage">
+                  </a> <!-- validateQuanityOfItemsUpdateForMoreItemsInSummaryPage -->
+                  <span class="method-name">validateQuanityOfItemsUpdateForMoreItemsInSummaryPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSummaryPageForSingleItemInCart">
+                  </a> <!-- validateSummaryPageForSingleItemInCart -->
+                  <span class="method-name">validateSummaryPageForSingleItemInCart</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validatetabdisplayed">
+                  </a> <!-- validatetabdisplayed -->
+                  <span class="method-name">validatetabdisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Test_Suite-class-passed -->
+          <div class="suite-Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ecart.test.SearchPageTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickOnItemsNavigateToProductDescriptionPage">
+                  </a> <!-- clickOnItemsNavigateToProductDescriptionPage -->
+                  <span class="method-name">clickOnItemsNavigateToProductDescriptionPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validatePageTitleTest">
+                  </a> <!-- validatePageTitleTest -->
+                  <span class="method-name">validatePageTitleTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateResultsMessageForInvalidItemsTest">
+                  </a> <!-- validateResultsMessageForInvalidItemsTest -->
+                  <span class="method-name">validateResultsMessageForInvalidItemsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateResultsMessageForNoItemsSearch">
+                  </a> <!-- validateResultsMessageForNoItemsSearch -->
+                  <span class="method-name">validateResultsMessageForNoItemsSearch</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSearchBoxWithValidItemsTest">
+                  </a> <!-- validateSearchBoxWithValidItemsTest -->
+                  <span class="method-name">validateSearchBoxWithValidItemsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateShoppingCartEmpty">
+                  </a> <!-- validateShoppingCartEmpty -->
+                  <span class="method-name">validateShoppingCartEmpty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateTabsInSearchPage">
+                  </a> <!-- validateTabsInSearchPage -->
+                  <span class="method-name">validateTabsInSearchPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Test_Suite-class-passed -->
+          <div class="suite-Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ecart.test.ProductPageTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateProductDesciptionPageForSingleItemInCart">
+                  </a> <!-- validateProductDesciptionPageForSingleItemInCart -->
+                  <span class="method-name">validateProductDesciptionPageForSingleItemInCart</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateProductDescriptionPageforPrinteddress">
+                  </a> <!-- validateProductDescriptionPageforPrinteddress -->
+                  <span class="method-name">validateProductDescriptionPageforPrinteddress</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateProductiondescriptionpageforPrintedChiffondress">
+                  </a> <!-- validateProductiondescriptionpageforPrintedChiffondress -->
+                  <span class="method-name">validateProductiondescriptionpageforPrintedChiffondress</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateProductiondescriptionpagefortshirtitem">
+                  </a> <!-- validateProductiondescriptionpagefortshirtitem -->
+                  <span class="method-name">validateProductiondescriptionpagefortshirtitem</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Test_Suite-class-passed -->
+        </div> <!-- panel Test_Suite -->
+        <div panel-name="test-xml-Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\ecartproject\test-output\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Test Suite&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.ecart.base.TestListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Ecart Tests&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.ecart.test.SummarypageTestCases&quot;/&gt;
+      &lt;class name=&quot;com.ecart.test.SearchPageTestCases&quot;/&gt;
+      &lt;class name=&quot;com.ecart.test.ProductPageTestCases&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Ecart Tests --&gt;
+&lt;/suite&gt; &lt;!-- Test Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Ecart Tests (3 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Test_Suite');
+function tableData_Test_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(17);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'validateQuanityOfItemsAndPricetotalsUpdateAfterRemoveAddItemsInShoppingCart')
+data.setCell(0, 2, 'com.ecart.test.SummarypageTestCases')
+data.setCell(0, 3, 59796);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'validateQuanityOfItemsUpdateForMoreItemsInSummaryPage')
+data.setCell(1, 2, 'com.ecart.test.SummarypageTestCases')
+data.setCell(1, 3, 36294);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'validatePriceTotalsUpdateAfterAddItemaInShoppingCart')
+data.setCell(2, 2, 'com.ecart.test.SummarypageTestCases')
+data.setCell(2, 3, 20945);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'validatetabdisplayed')
+data.setCell(3, 2, 'com.ecart.test.SummarypageTestCases')
+data.setCell(3, 3, 18372);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'validateProductDesciptionPageForSingleItemInCart')
+data.setCell(4, 2, 'com.ecart.test.ProductPageTestCases')
+data.setCell(4, 3, 16971);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'validateSummaryPageForSingleItemInCart')
+data.setCell(5, 2, 'com.ecart.test.SummarypageTestCases')
+data.setCell(5, 3, 15420);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'validateProductDescriptionPageforPrinteddress')
+data.setCell(6, 2, 'com.ecart.test.ProductPageTestCases')
+data.setCell(6, 3, 13181);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'validateProductiondescriptionpagefortshirtitem')
+data.setCell(7, 2, 'com.ecart.test.ProductPageTestCases')
+data.setCell(7, 3, 8952);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'validateProductiondescriptionpageforPrintedChiffondress')
+data.setCell(8, 2, 'com.ecart.test.ProductPageTestCases')
+data.setCell(8, 3, 7365);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'clickOnItemsNavigateToProductDescriptionPage')
+data.setCell(9, 2, 'com.ecart.test.SearchPageTestCases')
+data.setCell(9, 3, 4034);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'validateSearchBoxWithValidItemsTest')
+data.setCell(10, 2, 'com.ecart.test.SearchPageTestCases')
+data.setCell(10, 3, 3895);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'validateSearchReultsMatchingSearchQuery')
+data.setCell(11, 2, 'com.ecart.test.SearchPageTestCases')
+data.setCell(11, 3, 3148);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'validateResultsMessageForInvalidItemsTest')
+data.setCell(12, 2, 'com.ecart.test.SearchPageTestCases')
+data.setCell(12, 3, 2265);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'validateResultsMessageForNoItemsSearch')
+data.setCell(13, 2, 'com.ecart.test.SearchPageTestCases')
+data.setCell(13, 3, 1986);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'validateTabsInSearchPage')
+data.setCell(14, 2, 'com.ecart.test.SearchPageTestCases')
+data.setCell(14, 3, 130);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'validateShoppingCartEmpty')
+data.setCell(15, 2, 'com.ecart.test.SearchPageTestCases')
+data.setCell(15, 3, 106);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'validatePageTitleTest')
+data.setCell(16, 2, 'com.ecart.test.SearchPageTestCases')
+data.setCell(16, 3, 59);
+window.suiteTableData['Test_Suite']= { tableData: data, tableDiv: 'times-div-Test_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <div id="times-div-Test_Suite">
+              </div> <!-- times-div-Test_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ecart.test.SummarypageTestCases</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validatetabdisplayed</span>
+                <span class="method-start">22560 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">40937 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">41634 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateQuanityOfItemsAndPricetotalsUpdateAfterRemoveAddItemsInShoppingCart</span>
+                <span class="method-start">60762 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">120560 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">121248 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validatePriceTotalsUpdateAfterAddItemaInShoppingCart</span>
+                <span class="method-start">145730 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">166679 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">167377 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateSummaryPageForSingleItemInCart</span>
+                <span class="method-start">201919 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">217342 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">219163 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateQuanityOfItemsUpdateForMoreItemsInSummaryPage</span>
+                <span class="method-start">245902 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">282201 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ecart.test.SearchPageTestCases</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">282973 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validatePageTitleTest</span>
+                <span class="method-start">309554 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">309613 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">310303 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateSearchBoxWithValidItemsTest</span>
+                <span class="method-start">336034 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">339933 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">340689 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateResultsMessageForInvalidItemsTest</span>
+                <span class="method-start">367536 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">369801 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">370469 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateResultsMessageForNoItemsSearch</span>
+                <span class="method-start">387487 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">389477 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">390157 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateTabsInSearchPage</span>
+                <span class="method-start">407766 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">407900 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">408577 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">clickOnItemsNavigateToProductDescriptionPage</span>
+                <span class="method-start">428604 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">432638 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">433323 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateShoppingCartEmpty</span>
+                <span class="method-start">455082 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">455189 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">455863 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">validateSearchReultsMatchingSearchQuery</span>
+                <span class="method-start">474457 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">477610 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ecart.test.ProductPageTestCases</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">478326 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateProductDesciptionPageForSingleItemInCart</span>
+                <span class="method-start">499515 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">516490 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">517208 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateProductDescriptionPageforPrinteddress</span>
+                <span class="method-start">541577 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">554758 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">555482 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateProductiondescriptionpageforPrintedChiffondress</span>
+                <span class="method-start">578444 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">585809 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">586579 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateProductiondescriptionpagefortshirtitem</span>
+                <span class="method-start">609363 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">618315 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

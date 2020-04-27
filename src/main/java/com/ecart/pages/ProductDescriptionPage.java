@@ -1,5 +1,6 @@
 package com.ecart.pages;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
@@ -38,7 +39,7 @@ public class ProductDescriptionPage extends TestBase{
 	@FindBy(xpath="//button[@name='Submit']")
 	WebElement addtocart;
 	
-	@FindBy(css="body.product.product-5.product-printed-summer-dress.category-11.category-summer-dresses.hide-left-column.hide-right-column.lang_en:nth-child(2) div.columns-container div.container div.row:nth-child(4) div.center_column.col-xs-12.col-sm-12 div.primary_block.row:nth-child(1) div.pb-center-column.col-xs-12.col-sm-4 div:nth-child(4) div.rte.align_justify > p:nth-child(1)")
+	@FindBy(xpath="//div[@id='short_description_content']")
 	WebElement description;
 	
 	@FindBy(xpath="//label[contains(text(),'Quantity')]")
@@ -53,11 +54,13 @@ public class ProductDescriptionPage extends TestBase{
 	@FindBy(xpath="//span[contains(text(),'Proceed to checkout')]")
 	WebElement proceedtocheckout;
 	
-	@FindBy(xpath="//a[@class='btn btn-default button-plus product_quantity_up']//span")
+	@FindBy(xpath="//a[@class='btn btn-default button-plus product_quantity_up']//i[@class='icon-plus']")
 	WebElement plusqtyicon;
 	
 	@FindBy(css="body.order.hide-left-column.hide-right-column.lang_en:nth-child(2) div.columns-container div.container div.row:nth-child(3) div.center_column.col-xs-12.col-sm-12 div.table_block.table-responsive:nth-child(5) table.table.table-bordered.stock-management-on tr.cart_item.first_item.address_0.odd:nth-child(1) td.cart_delete.text-center div:nth-child(1) a.cart_quantity_delete > i.icon-trash")
 	WebElement removeitem;
+	
+	
 	
 	public ProductDescriptionPage() {
 		PageFactory.initElements(driver, this);
@@ -132,6 +135,39 @@ public class ProductDescriptionPage extends TestBase{
 				}
 			}
 			
+		public void selectonecolorfromavailablecolor() {
+			List<WebElement> colorslist = driver.findElements(By.xpath("//ul[@id='color_to_pick_list']//li//a"));
+			System.out.println("colorslist"+colorslist);
+//				colorslist.get(0).click();
+			for(WebElement color:colorslist) {
+				if(color.getAttribute("title").equalsIgnoreCase("Green")){
+					color.click();
+					System.out.println("Green color select");
+					break;
+				}
+				
+				else if(color.getAttribute("title").equalsIgnoreCase("Orange")){
+					color.click();
+					System.out.println("Orange color select");
+					break;
+				}
+				else if(color.getAttribute("title").equalsIgnoreCase("Blue")){
+					color.click();
+					System.out.println("Blue color select");
+					break;
+				}
+				else if(color.getAttribute("title").equalsIgnoreCase("Black")){
+					color.click();
+					System.out.println("Black color select");
+					break;
+				}
+				System.out.println(color.getAttribute("title"));
+			
+		}
+
+	}
+			
+		
 		
 		public void clickOnItem(String item) throws Exception{
 			try {
@@ -145,7 +181,6 @@ public class ProductDescriptionPage extends TestBase{
 //			Actions action = new Actions(driver);
 //			action.moveToElement(plusqtyicon).click().build().perform();
 				((JavascriptExecutor) driver).executeScript("arguments[0].click();", plusqtyicon);
-				plusqtyicon.click();
 			}
 			else if(item.equalsIgnoreCase("deleteitem")) {
 				removeitem.click();
@@ -184,6 +219,9 @@ public class ProductDescriptionPage extends TestBase{
 			}else if(color.equalsIgnoreCase("blue")) {
 			selectblue.isSelected();
 		}
+			else if(color.equalsIgnoreCase("orange")) {
+				selectorange.isSelected();
+			}
 		}
 		
 		public String validateNoOfItemsAddedtoCartBeforeCheckOut() {

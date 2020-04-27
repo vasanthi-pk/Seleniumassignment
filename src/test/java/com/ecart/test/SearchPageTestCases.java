@@ -11,6 +11,11 @@ import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.AssertJUnit;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -33,6 +38,7 @@ public class SearchPageTestCases extends TestBase {
 	@BeforeMethod
 	/*initialise browser*/
 	public void setUp() {
+		
 		initialise();
 		System.out.println("driver initilaised");
 		search = new SearchPage();
@@ -42,10 +48,13 @@ public class SearchPageTestCases extends TestBase {
 	@Test(priority = 0)
 	/*validate page title*/
 	public void validatePageTitleTest() {
+		
 		ExtentTestManager.getTest().log(Status.INFO, "validate page title is My Store for Search Page");
 		String title = search.validateSearchPageTitle();
 		Assert.assertEquals(title, "My Store");
+		System.out.println("passed");
 		ExtentTestManager.getTest().log(Status.INFO, "PASSED");
+		System.out.println("passed");
 		
 		
 	}
@@ -98,7 +107,7 @@ public class SearchPageTestCases extends TestBase {
 }
 	
 	
-//	
+	
 	@Test(priority = 4)
 	/*validate tabs in search page*/
 	public void validateTabsInSearchPage() {
@@ -128,7 +137,20 @@ public class SearchPageTestCases extends TestBase {
 		
 		}
 	
-	
+	@Test(priority = 7)
+	/*validate click on selected item navigate to product description page*/
+	public void validateSearchReultsMatchingSearchQuery() {
+		ExtentTestManager.getTest().log(Status.INFO, "validating select on item navigating to product description page");
+		search.searchItemsInSearchBox(prop.getProperty("item"));
+		String results = search.validateSearchResultsInSearchPage();
+		System.out.println(results);
+		Boolean flag2 = search.validateMatchingSearchResults();
+		Assert.assertTrue(flag2);
+		ExtentTestManager.getTest().log(Status.INFO, "validating all results are matching the search query otherwise test case will get failed");
+		Boolean flag = search.validateInvalidResults();
+		Assert.assertTrue(flag,"Invalid items blouse and t-shirt diplayed,its a defect");
+		ExtentTestManager.getTest().log(Status.INFO, "Test Executed successfully");
+	}
 	
 	@Test(priority = 6)
 	/*validate shopping cart empty*/

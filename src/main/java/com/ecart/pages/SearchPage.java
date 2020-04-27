@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.ecart.base.TestBase;
 
@@ -56,8 +57,14 @@ public class SearchPage extends TestBase {
 	@FindBy(xpath="//a[@class='product_img_link']//img[@class='replace-2x img-responsive']")
 	WebElement sleeveshirt;
 	
+	@FindBy(xpath="//li[@class='ajax_block_product col-xs-12 col-sm-6 col-md-4 last-in-line first-item-of-tablet-line last-item-of-mobile-line hovered']//a[@class='product-name'][contains(text(),'Printed Dress')]")
+	WebElement printeddress;
+	
 	@FindBy(xpath="//div[@class='right-block']//a[@class='product-name'][contains(text(),'Printed Chiffon Dress')]")
 	WebElement printechiffonddress;
+	
+	@FindBy(xpath="//div[@class='right-block']//a[@class='product-name'][contains(text(),'Blouse')]")
+	WebElement blouse;
 	
 	@FindBy(xpath="//div[@class='shopping_cart']//a[@title='View my shopping cart']")
 	WebElement shoppingcart;
@@ -124,6 +131,7 @@ public class SearchPage extends TestBase {
 	}
 	
 	public void selectOneFromMatchSearchResults(String item) {
+		
 		try {
 		if(item.equalsIgnoreCase("Printed Summer Dress")) {
 		summerdress.click();
@@ -133,6 +141,12 @@ public class SearchPage extends TestBase {
 		}
 		else if(item.equalsIgnoreCase("printechiffonddress")) {
 			printechiffonddress.click();
+		}
+		else if(item.equalsIgnoreCase("Printed Dress")){
+			printeddress.click();
+		}
+		else if(item.equalsIgnoreCase("Blouse")) {
+			blouse.click();
 		}
 		}
 		catch (NoSuchElementException e) {
@@ -198,5 +212,62 @@ public class SearchPage extends TestBase {
 
 		
 }
+	public Boolean validateInvalidResults() {
+		Boolean flag;	
+		List<WebElement> searchresults = driver.findElements(By.xpath("//li[contains(@class,'ajax_block_product col')]//a[contains(@class,'product-name')][contains(text(),'Dress')]"));
+		WebElement item1 = driver.findElement(By.xpath("//div[contains(@class,'right-block')]//a[contains(@class,'product-name')][contains(text(),'Faded Short Sleeve T-shirts')]"));
+		
+		WebElement item2 = driver.findElement(By.xpath("//div[contains(@class,'right-block')]//a[contains(@class,'product-name')][contains(text(),'Blouse')]"));
+		searchresults.add(item2);
+		searchresults.add(item1);
+		
+//		
+		for(WebElement actualresult:searchresults) {
+			if(!actualresult.getText().contains("Dress")) {
+			System.out.println("results are not matched");
+			return flag=false;
+		}
 	}
+		return flag=true;
+		
+	}
+	
+	
+public void selectOneFromSearchResults(String item) {
+	try {
+		if(item.equalsIgnoreCase("dress"))
+		 {
+			if(summerdress.isDisplayed()) {
+			summerdress.click();
+		
+			} else if(printeddress.isDisplayed()) {
+			printeddress.click();
+			}
+			else if(printechiffonddress.isDisplayed()) {
+			printechiffonddress.click();
+			}
+		 }
+		if(item.equalsIgnoreCase("T-Shirts")) {
+			if(sleeveshirt.isDisplayed()) {
+				sleeveshirt.click();
+			}
+		}
+		
+		if(item.equalsIgnoreCase("blouse")) {
+			if(blouse.isDisplayed()) {
+				blouse.click();
+			}
+		}
+	}
+		catch (NoSuchElementException e) {
+			System.out.println("Element was not found in DOM "+ e.getStackTrace());
+	} catch (Exception e) {
+			System.out.println("Unable to click on element "+ e.getStackTrace());
+		} 
+			
+		}
+	
+}
+	
+
 
